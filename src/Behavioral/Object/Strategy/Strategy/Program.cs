@@ -12,6 +12,9 @@ namespace Strategy
             duck = new RubberDuck();
             TestDuck(duck);
 
+            duck = new ModelDuck();
+            TestDuck(duck);
+
             Console.ReadKey(true);
         }
 
