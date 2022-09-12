@@ -7,7 +7,7 @@ namespace Decorator
         private static void Main()
         {
             // Create base weapon with no modifiers
-            Weapon weapon = new Sword();
+            IWeapon weapon = new Sword();
 
             // Create modifiers around weapon
             WeaponModifierDecorator heavy = new Heavy(weapon);

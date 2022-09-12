@@ -1,13 +1,13 @@
 ﻿namespace Decorator
 {
-    public class Axe : Weapon
+    public class Axe : IWeapon
     {
-        public Axe()
+        public string GetDescription()
         {
-            Description = "Axe";
+            return "Axe";
         }
 
-        public override int Damage()
+        public int Damage()
         {
             return 10;
         }

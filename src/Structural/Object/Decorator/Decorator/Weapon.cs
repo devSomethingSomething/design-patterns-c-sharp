@@ -1,14 +1,9 @@
 ﻿namespace Decorator
 {
-    public abstract class Weapon
+    public interface IWeapon
     {
-        public string Description { private get; set; } = "Unknown weapon";
+        string GetDescription();
 
-        public virtual string GetDescription()
-        {
-            return Description;
-        }
-
-        public abstract int Damage();
+        int Damage();
     }
 }

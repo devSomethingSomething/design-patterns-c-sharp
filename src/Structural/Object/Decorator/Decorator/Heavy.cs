@@ -2,21 +2,16 @@
 {
     public class Heavy : WeaponModifierDecorator
     {
-        private Weapon weapon;
-
-        public Heavy(Weapon weapon)
-        {
-            this.weapon = weapon;
-        }
+        public Heavy(IWeapon weapon) : base(weapon) { }
 
         public override string GetDescription()
         {
-            return weapon.GetDescription() + "\nHeavy";
+            return base.GetDescription() + "\nHeavy";
         }
 
         public override int Damage()
         {
-            return weapon.Damage() + 5;
+            return base.Damage() + 5;
         }
     }
 }
