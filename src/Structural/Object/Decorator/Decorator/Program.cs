@@ -10,11 +10,10 @@ namespace Decorator
             IWeapon weapon = new Sword();
 
             // Create modifiers around weapon
-            WeaponModifierDecorator heavy = new Heavy(weapon);
-            WeaponModifierDecorator fire = new Fire(heavy);
+            WeaponModifierDecorator modifiedWeapon = new Fire(new Heavy(weapon));
 
             // Use delegation to invoke methods
-            Console.WriteLine(fire.GetDescription() + "\n" + fire.Damage());
+            Console.WriteLine(modifiedWeapon.GetDescription() + "\n" + modifiedWeapon.Damage());
 
             Console.ReadKey(true);
         }
