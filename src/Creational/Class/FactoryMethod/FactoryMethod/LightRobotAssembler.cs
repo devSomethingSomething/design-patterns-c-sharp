@@ -2,10 +2,17 @@
 {
     public class LightRobotAssembler : RobotAssembler
     {
-        protected override IRobot Create(string type)
+        protected override Robot Create(string type)
         {
-            // Add logic to determine which type to return
-            return null;
+            switch (type)
+            {
+                case nameof(LightAFrame):
+                    return new LightAFrame();
+                case nameof(LightBFrame):
+                    return new LightBFrame();
+                default:
+                    return null;
+            }
         }
     }
 }

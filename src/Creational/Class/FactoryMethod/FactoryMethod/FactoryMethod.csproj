@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AFrame.cs" />
-    <Compile Include="BFrame.cs" />
+    <Compile Include="HeavyAFrame.cs" />
+    <Compile Include="HeavyBFrame.cs" />
+    <Compile Include="LightAFrame.cs" />
+    <Compile Include="LightBFrame.cs" />
     <Compile Include="HeavyRobotAssembler.cs" />
-    <Compile Include="IRobot.cs" />
+    <Compile Include="Robot.cs" />
     <Compile Include="LightRobotAssembler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

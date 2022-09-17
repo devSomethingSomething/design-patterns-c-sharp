@@ -2,9 +2,9 @@
 {
     public abstract class RobotAssembler
     {
-        public IRobot AssembleRobot(string type)
+        public Robot AssembleRobot(string type)
         {
-            IRobot robot = Create(type);
+            Robot robot = Create(type);
 
             robot.Register();
             robot.Start();
@@ -13,6 +13,6 @@
             return robot;
         }
 
-        protected abstract IRobot Create(string type);
+        protected abstract Robot Create(string type);
     }
 }
