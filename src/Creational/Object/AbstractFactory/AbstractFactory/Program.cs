@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
+            RobotAssembler robotAssembler = new LightRobotAssembler();
+
+            Robot robot = robotAssembler.AssembleRobot(nameof(AFrame));
+
+            Console.WriteLine(robot.Build());
+
+            Console.ReadKey(true);
         }
     }
 }
