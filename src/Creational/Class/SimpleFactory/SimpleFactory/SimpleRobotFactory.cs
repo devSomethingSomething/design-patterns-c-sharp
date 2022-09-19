@@ -1,8 +1,8 @@
 ﻿namespace SimpleFactory
 {
-    public class SimpleRobotFactory : IFactory<IRobot>
+    public class SimpleRobotFactory : IFactory
     {
-        public IRobot Create(string type)
+        public object Create(string type)
         {
             switch (type)
             {

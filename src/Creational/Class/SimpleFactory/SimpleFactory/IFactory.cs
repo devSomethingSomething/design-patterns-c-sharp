@@ -1,7 +1,7 @@
 ﻿namespace SimpleFactory
 {
-    public interface IFactory<T>
+    public interface IFactory
     {
-        T Create(string type);
+        object Create(string type);
     }
 }

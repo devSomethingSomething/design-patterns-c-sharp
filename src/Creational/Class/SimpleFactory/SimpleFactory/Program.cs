@@ -6,7 +6,7 @@ namespace SimpleFactory
     {
         private static void Main()
         {
-            IFactory<IRobot> factory = new SimpleRobotFactory();
+            IFactory factory = new SimpleRobotFactory();
 
             RobotAssembler robotAssembler = new RobotAssembler(factory);
 
