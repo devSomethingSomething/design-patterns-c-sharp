@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ICommand.cs" />
     <Compile Include="Light.cs" />
+    <Compile Include="LightOffCommand.cs" />
     <Compile Include="LightOnCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

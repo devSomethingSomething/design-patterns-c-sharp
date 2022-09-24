@@ -2,16 +2,23 @@
 {
     public class Switch
     {
-        private ICommand command;
+        private ICommand onCommand;
+        private ICommand offCommand;
 
-        public Switch(ICommand command)
+        public Switch(ICommand onCommand, ICommand offCommand)
         {
-            this.command = command;
+            this.onCommand = onCommand;
+            this.offCommand = offCommand;
         }
 
         public void On()
         {
-            command.Execute();
+            onCommand.Execute();
+        }
+
+        public void Off()
+        {
+            offCommand.Execute();
         }
     }
 }
