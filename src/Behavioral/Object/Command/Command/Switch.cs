@@ -5,7 +5,13 @@
         private ICommand onCommand;
         private ICommand offCommand;
 
-        public Switch(ICommand onCommand, ICommand offCommand)
+        public Switch()
+        {
+            onCommand = new NoCommand();
+            offCommand = new NoCommand();
+        }
+
+        public void SetCommands(ICommand onCommand, ICommand offCommand)
         {
             this.onCommand = onCommand;
             this.offCommand = offCommand;

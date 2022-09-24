@@ -6,7 +6,9 @@ namespace Command
     {
         private static void Main()
         {
-            var tempSwitch = new Switch(
+            var tempSwitch = new Switch();
+
+            tempSwitch.SetCommands(
                 new LightOnCommand(new Light()),
                 new LightOffCommand(new Light()));
 
