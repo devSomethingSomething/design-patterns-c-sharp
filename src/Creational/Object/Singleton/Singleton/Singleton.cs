@@ -4,9 +4,24 @@ namespace Singleton
 {
     public class Singleton
     {
-        public static Singleton Instance { get; private set; } = new Singleton();
+        private volatile static Singleton instance;
+
+        private static object toLock = new object();
 
         private Singleton() { }
+
+        public static Singleton Instance()
+        {
+            lock (toLock)
+            {
+                if (instance == null)
+                {
+                    instance = new Singleton();
+                }
+            }
+
+            return instance;
+        }
 
         public void Test()
         {

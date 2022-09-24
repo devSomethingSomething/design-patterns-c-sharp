@@ -6,7 +6,7 @@ namespace Singleton
     {
         private static void Main()
         {
-            Singleton.Instance.Test();
+            Singleton.Instance().Test();
 
             Console.ReadKey(true);
         }
