@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Command
 {
@@ -14,6 +15,18 @@ namespace Command
 
             tempSwitch.On();
             tempSwitch.Off();
+
+            tempSwitch.Undo();
+
+            MacroCommand onMacroCommand = new MacroCommand(new List<ICommand>()
+            {
+                new LightOnCommand(new Light()),
+                new LightOffCommand(new Light())
+            });
+
+            tempSwitch.SetCommands(onMacroCommand, new NoCommand());
+
+            tempSwitch.On();
 
             tempSwitch.Undo();
 
