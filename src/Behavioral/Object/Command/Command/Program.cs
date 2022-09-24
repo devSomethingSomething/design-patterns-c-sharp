@@ -15,6 +15,8 @@ namespace Command
             tempSwitch.On();
             tempSwitch.Off();
 
+            tempSwitch.Undo();
+
             Console.ReadKey(true);
         }
     }

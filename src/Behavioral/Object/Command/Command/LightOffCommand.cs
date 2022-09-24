@@ -1,6 +1,8 @@
-﻿namespace Command
+﻿using System;
+
+namespace Command
 {
-    internal class LightOffCommand : ICommand
+    public class LightOffCommand : ICommand
     {
         private Light light;
 
@@ -12,6 +14,13 @@
         public void Execute()
         {
             light.Off();
+        }
+
+        public void Undo()
+        {
+            Console.Write("UNDO: ");
+
+            light.On();
         }
     }
 }
