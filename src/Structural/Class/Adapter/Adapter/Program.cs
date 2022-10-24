@@ -1,15 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adapter
+﻿namespace Adapter
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
+            new Adapter(new TestAdaptee()).Action();
+        }
+    }
+
+    public interface ITarget
+    {
+        void Action();
+    }
+
+    public class TestTarget : ITarget
+    {
+        public void Action() { }
+    }
+
+    public interface IAdaptee
+    {
+        void DifferentAction();
+    }
+
+    public class TestAdaptee : IAdaptee
+    {
+        public void DifferentAction() { }
+    }
+
+    public class Adapter : ITarget
+    {
+        private IAdaptee adaptee;
+
+        public Adapter(IAdaptee adaptee)
+        {
+            this.adaptee = adaptee;
+        }
+
+        public void Action()
+        {
+            adaptee.DifferentAction();
         }
     }
 }
